@@ -15,21 +15,11 @@ apt_pkgs = ['aircrack-ng', 'wifite', 'ettercap', 'sslstrip', 'isc-dhcp-server',
 # apt-get
 git_pkgs = ['https://github.com/v1s1t0r1sh3r3/airgeddon.git',
             'https://github.com/wi-fi-analyzer/fluxion.git',
-            'https://github.com/gobiasinfosec/Wireless_Query.git',
-            'https://github.com/H0nus/RogueSploit.git',
             'https://github.com/P0cL4bs/WiFi-Pumpkin.git',
             'https://github.com/wifiphisher/wifiphisher.git',
             'https://github.com/s0lst1c3/eaphammer.git',
-            'https://github.com/entropy1337/infernal-twin.git',
-            'https://github.com/OpenSecurityResearch/hostapd-wpe.git',
-            'https://github.com/chrizator/netattack.git',
-            'https://github.com/hkm/whoishere.py.git',
-            'https://github.com/InfamousSYN/rogue.git',
-            'https://github.com/sensepost/mana.git',
-            'https://github.com/elkentaro/KismetMobileDashboard.git',
-            'https://github.com/wpatoolkit/Cap-Converter.git',
-            'https://github.com/tehw0lf/airbash.git',
-            'https://github.com/hashcat/hashcat-utils.git']
+            'https://github.com/hashcat/hashcat-utils.git'
+            'https://github.com/derv82/wifite2.git']
 
 
 # Packages from github
