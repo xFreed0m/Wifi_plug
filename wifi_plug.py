@@ -10,24 +10,26 @@ from subprocess import STDOUT
 from termcolor import colored
 
 apt_pkgs = ['aircrack-ng', 'wifite', 'ettercap', 'sslstrip', 'isc-dhcp-server',
-            'dhcp-server', 'dsniff', 'reaver', 'bully', 'asleap']  # packages from apt-get
-git_pkgs = ['https://github.com/v1s1t0r1sh3r3/airgeddon/archive/master.zip',
-            'https://github.com/wi-fi-analyzer/fluxion/archive/master.zip',
-            'https://github.com/gobiasinfosec/Wireless_Query/archive/master.zip',
-            'https://github.com/H0nus/RogueSploit/archive/master.zip',
-            'https://github.com/P0cL4bs/WiFi-Pumpkin/archive/master.zip',
-            'https://github.com/wifiphisher/wifiphisher/archive/master.zip',
-            'https://github.com/s0lst1c3/eaphammer/archive/master.zip',
-            'https://github.com/entropy1337/infernal-twin/archive/master.zip',
-            'https://github.com/OpenSecurityResearch/hostapd-wpe/archive/master.zip',
-            'https://github.com/chrizator/netattack/archive/master.zip',
-            'https://github.com/hkm/whoishere.py/archive/master.zip',
-            'https://github.com/InfamousSYN/rogue/archive/master.zip',
-            'https://github.com/sensepost/mana/archive/master.zip',
-            'https://github.com/elkentaro/KismetMobileDashboard/archive/master.zip',
-            'https://github.com/wpatoolkit/Cap-Converter/archive/master.zip',
-            'https://github.com/tehw0lf/airbash/archive/master.zip',
-            'https://github.com/hashcat/hashcat-utils/archive/master.zip']
+            'dhcp-server', 'dsniff', 'reaver', 'bully', 'asleap', 'bettercap',
+            'mdk4', 'hostapd', 'lighttpd', 'hostapd-wpe']  # packages from
+# apt-get
+git_pkgs = ['https://github.com/v1s1t0r1sh3r3/airgeddon.git',
+            'https://github.com/wi-fi-analyzer/fluxion.git',
+            'https://github.com/gobiasinfosec/Wireless_Query.git',
+            'https://github.com/H0nus/RogueSploit.git',
+            'https://github.com/P0cL4bs/WiFi-Pumpkin.git',
+            'https://github.com/wifiphisher/wifiphisher.git',
+            'https://github.com/s0lst1c3/eaphammer.git',
+            'https://github.com/entropy1337/infernal-twin.git',
+            'https://github.com/OpenSecurityResearch/hostapd-wpe.git',
+            'https://github.com/chrizator/netattack.git',
+            'https://github.com/hkm/whoishere.py.git',
+            'https://github.com/InfamousSYN/rogue.git',
+            'https://github.com/sensepost/mana.git',
+            'https://github.com/elkentaro/KismetMobileDashboard.git',
+            'https://github.com/wpatoolkit/Cap-Converter.git',
+            'https://github.com/tehw0lf/airbash.git',
+            'https://github.com/hashcat/hashcat-utils.git']
 
 
 # Packages from github
@@ -66,19 +68,11 @@ def installer():
                 sys.exit(1)
         for pkg in git_pkgs:  # installing github packages
             try:
-                proc = subprocess.Popen("wget " + pkg, shell=True, stdin=None,
+                proc = subprocess.Popen("git clone " + pkg, shell=True, stdin=None,
                                         stdout=open(os.devnull, "wb"), stderr=STDOUT,
                                         executable="/bin/bash")
                 proc.wait()
-                proc = subprocess.Popen('unzip master.zip', shell=True, stdin=None,
-                                        stdout=open(os.devnull, "wb"), stderr=STDOUT,
-                                        executable="/bin/bash")
-                proc.wait()
-                proc = subprocess.Popen('rm master.zip', shell=True, stdin=None,
-                                        stdout=open(os.devnull, "wb"), stderr=STDOUT,
-                                        executable="/bin/bash")
-                proc.wait()
-                print colored("[+] Done downloading and extracting " + pkg, 'green')
+                print colored("[+] Done cloning " + pkg, 'green')
             except KeyboardInterrupt:
                 print colored("[-]halted by CTRL+C", 'red')
                 sys.exit(1)
