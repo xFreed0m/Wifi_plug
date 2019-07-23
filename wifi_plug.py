@@ -76,8 +76,8 @@ def installer():
             except KeyboardInterrupt:
                 print colored("[-]halted by CTRL+C", 'red')
                 sys.exit(1)
-            print colored("[+] All done! have fun!", 'green')
-            sys.exit(0)
+        print colored("[+] All done! have fun!", 'green')
+        sys.exit(0)
     else:
         print colored("[-] Can't connect to the internet.\n", 'red')
 
