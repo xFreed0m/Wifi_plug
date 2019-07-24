@@ -18,7 +18,7 @@ git_pkgs = ['https://github.com/v1s1t0r1sh3r3/airgeddon.git',
             'https://github.com/P0cL4bs/WiFi-Pumpkin.git',
             'https://github.com/wifiphisher/wifiphisher.git',
             'https://github.com/s0lst1c3/eaphammer.git',
-            'https://github.com/hashcat/hashcat-utils.git'
+            'https://github.com/hashcat/hashcat-utils.git',
             'https://github.com/derv82/wifite2.git']
 
 
